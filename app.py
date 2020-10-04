@@ -47,7 +47,7 @@ class ProductsList(Resource):
 
     def post(self):
         content = request.json
-        if len(content) == 1:
+        if len([content]) == 1:
             prod.insert_one(content)
         else:
             prod.insert_many(content)
