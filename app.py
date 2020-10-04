@@ -26,7 +26,7 @@ def retRes(status,message):
             'status': status,
             'message': message
     }
-    return jsonify(retMap)
+    return retMap
     
 
 def retData(status,data):
@@ -51,7 +51,7 @@ class ProductsList(Resource):
             prod.insert_one(content)
         else:
             prod.insert_many(content)
-        return jsonify(retMap(status = 200, message = "Data Added Successfully"))
+        return jsonify(retRes(status = 200, message = "Data Added Successfully"))
     
 
 class Product(Resource):
@@ -68,13 +68,13 @@ class Product(Resource):
         content = request.json
         newvalues = {"$set": content}
         prod.update_one(my_query,newvalues)
-        return jsonify(retMap(status = 200, message = "Product Data Updated Successfully"))
+        return jsonify(retRes(status = 200, message = "Product Data Updated Successfully"))
 
 
     def delete(self,name):
         my_query = {'name':name}
         prod.delete_one(my_query)
-        return jsonify(retMap(status = 200, message = "Product deleted Successfully"))
+        return jsonify(retRes(status = 200, message = "Product deleted Successfully"))
 
 class ProductBrand(Resource):
     def get(self,brand_name):
@@ -100,7 +100,7 @@ class Populate(Resource):
         f = open("Greendeck SE Assignment Task 1.json",'r')
         data = json.load(f)
         prod.insert_many(data)
-        return jsonify(retMap(status = 200, message = "Data Added Successfully"))
+        return jsonify(retRes(status = 200, message = "Data Added Successfully"))
 
 
 
@@ -113,4 +113,4 @@ api.add_resource(Populate,"/api/populate",endpoint = 'populate')
 
 
 if __name__ == '__main__':
-    app.run(host ='0.0.0.0', port = 5001, debug = True)
+    app.run(host ='0.0.0.0', port = 5001)
