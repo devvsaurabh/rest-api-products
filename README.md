@@ -2,24 +2,36 @@
 
 API allows user to perform basic CRUD operations.
 
+<br/>
+
 # Installation 
 
 ### Clone the repository
-> git clone https://github.com/devvsaurabh/rest-api-products.git
+> git clone https://github.com/devvsaurabh/rest-api-products.git \
+> cd rest-api-products
+
+<br/>
 
 ### Build Docker image
 > docker build -t rest_api_products:app .
 
+<br/>
+
 ### Install with Docker
 > docker run -p 5001:5001 -d rest_api_products:app
 
+<br/>
 
 # Usage
 
 This is an example of running a service locally (localhost), using port 5051.
 
+<br/>
+
 ## Access API on localhost with the given link :
 > http://0.0.0.0:5001/api/
+
+<br/>
 
 ## API Endpoints
 
@@ -31,7 +43,9 @@ This is an example of running a service locally (localhost), using port 5051.
 | brand | http://0.0.0.0:5001/api/product/brand/<<string:brand_name>> | ['GET'] |
 | currency | http://0.0.0.0:5001/api/product/currency/<<string:currency>> | ['GET'] |
 
-#
+
+<br/>
+<br/>
 
 
 | Endpoint | Method | Description |
@@ -45,10 +59,13 @@ This is an example of running a service locally (localhost), using port 5051.
 |brand | GET | Returns product details of a particular brand |
 | currency | GET | Returns product details with a given currency |
 
+<br/>
 
 ## REST API
 #
-Detailed overview of the API with input and output samples in POSTMAN
+Detailed overview of the API with input and output screenshots in POSTMAN
+
+<br/>
 
 ### Get list of all Products
 #
@@ -59,6 +76,7 @@ Detailed overview of the API with input and output samples in POSTMAN
 ### Response
 ![ ](https://github.com/devvsaurabh/rest-api-products/blob/main/img/all_data.png?raw=true)
 
+<br/>
 
 ### Create new product
 #
@@ -69,7 +87,7 @@ Detailed overview of the API with input and output samples in POSTMAN
 ### Response
 ![ ](https://github.com/devvsaurabh/rest-api-products/blob/main/img/post_data.png?raw=true)
 
-
+<br/>
 
 ### Get product using product name
 #
@@ -81,6 +99,8 @@ Detailed overview of the API with input and output samples in POSTMAN
 ![ ](https://github.com/devvsaurabh/rest-api-products/blob/main/img/get_product.png?raw=true)
 
 
+<br/>
+
 ### Update product details
 #
 ### Request
@@ -90,6 +110,7 @@ Detailed overview of the API with input and output samples in POSTMAN
 ### Response
 ![ ](https://github.com/devvsaurabh/rest-api-products/blob/main/img/update_data.png?raw=true)
 
+<br/>
 
 ### Delete the product
 #
@@ -100,6 +121,7 @@ Detailed overview of the API with input and output samples in POSTMAN
 ### Response
 ![ ](https://github.com/devvsaurabh/rest-api-products/blob/main/img/delete_data.png?raw=true)
 
+<br/>
 
 ### Get the products with brand name
 #
@@ -110,6 +132,7 @@ Detailed overview of the API with input and output samples in POSTMAN
 ### Response
 ![ ](https://github.com/devvsaurabh/rest-api-products/blob/main/img/brand.png?raw=true)
 
+<br/>
 
 ### Get the products with currency
 #
